@@ -1,0 +1,1046 @@
+/* ==========================
+   LET'S GYM TALK - STYLE CSS
+   Versão Premium (2026)
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #0b0f14;
+  color: #e8e8e8;
+  line-height: 1.7;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.header {
+  background: rgba(15, 23, 42, 0.92);
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.header h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+/* ==========================
+   NAV (DESKTOP)
+========================== */
+
+.nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 600;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+.nav-highlight {
+  background: rgba(34, 197, 94, 0.12);
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(34, 197, 94, 0.30);
+  color: #22c55e !important;
+  font-weight: 800;
+}
+
+.nav-highlight:hover {
+  background: rgba(34, 197, 94, 0.18);
+}
+
+/* ==========================
+   MOBILE MENU BUTTON
+========================== */
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ==========================
+   SIDE MENU (MOBILE)
+========================== */
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.97);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2000;
+  transition: right 0.3s ease;
+  border-left: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(12px);
+}
+
+.side-menu.active {
+  right: 0;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 12px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.side-menu a:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+/* ==========================
+   FLOATING BUTTON (PREMIUM)
+========================== */
+
+.floating-btn {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  background: #22c55e;
+  color: #0b0f14;
+  padding: 14px 18px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 900;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.65);
+  transition: 0.3s;
+  z-index: 999;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.floating-btn:hover {
+  transform: scale(1.07);
+}
+
+.floating-btn::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 18px;
+  border: 2px solid rgba(34, 197, 94, 0.25);
+  opacity: 0.8;
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.10);
+    opacity: 0;
+  }
+}
+
+/* ==========================
+   HERO (CAPA PREMIUM CORRIGIDA)
+========================== */
+
+.hero {
+  padding: 95px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  background-image: url("assets/dumbell.png");
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* overlay escuro mais equilibrado */
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 15, 20, 0.55),
+    rgba(11, 15, 20, 0.92)
+  );
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* glow verde/azul premium mais fraco */
+  background: radial-gradient(circle at top, rgba(34, 197, 94, 0.12), transparent 60%);
+  z-index: 0;
+}
+
+.hero-content {
+  max-width: 980px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 18px;
+  font-weight: 900;
+  color: white;
+  line-height: 1.15;
+  text-shadow: 0px 6px 18px rgba(0, 0, 0, 0.70);
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #cbd5e1;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.65);
+}
+
+.hero-highlight {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 16px;
+  border-radius: 16px;
+  margin: 18px auto;
+  max-width: 780px;
+  color: #e2e8f0;
+  backdrop-filter: blur(12px);
+}
+
+.disclaimer {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  margin: 18px auto;
+  max-width: 780px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+/* ==========================
+   HERO BUTTONS
+========================== */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.primary {
+  background: #22c55e;
+  color: #0b0f14;
+}
+
+.primary:hover {
+  transform: scale(1.05);
+}
+
+.secondary {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================
+   LEVEL BUTTONS
+========================== */
+
+.level-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.level-btn {
+  border: none;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.level-btn:hover {
+  transform: scale(1.05);
+}
+
+.green {
+  background: #22c55e;
+  color: #0b0f14;
+}
+
+.yellow {
+  background: #facc15;
+  color: #0b0f14;
+}
+
+.red {
+  background: #ef4444;
+  color: #0b0f14;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+.section {
+  padding: 70px 20px;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+}
+
+.section-title {
+  font-size: 34px;
+  margin-bottom: 28px;
+  text-align: center;
+  font-weight: 900;
+  color: white;
+}
+
+.green-title {
+  color: #22c55e;
+}
+
+.yellow-title {
+  color: #facc15;
+}
+
+.red-title {
+  color: #ef4444;
+}
+
+.products-intro {
+  text-align: center;
+  color: #cbd5e1;
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+
+/* ==========================
+   PREMIUM VISUAL EFFECTS
+========================== */
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 900px;
+  height: 250px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.10), transparent 70%);
+  filter: blur(40px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================
+   CONTENT BOX
+========================== */
+
+.content-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 28px;
+  border-radius: 18px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(10px);
+}
+
+.content-box h3 {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.content-box ul {
+  margin-top: 12px;
+  margin-left: 22px;
+  color: #cbd5e1;
+}
+
+.content-box p {
+  color: #cbd5e1;
+  margin-bottom: 14px;
+}
+
+/* ==========================
+   GRID + CARDS
+========================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+/* PREMIUM CARDS */
+
+.card,
+.product-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 22px;
+  border-radius: 20px;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+}
+
+.card:hover,
+.product-card:hover {
+  transform: translateY(-7px);
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 900;
+  color: white;
+}
+
+.card p {
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+/* ==========================
+   FAQ
+========================== */
+
+.faq {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-item {
+  margin-bottom: 12px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 18px;
+}
+
+.faq-answer p {
+  padding: 15px 0;
+  color: #cbd5e1;
+}
+
+/* ==========================
+   PRODUCTS
+========================== */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.product-image {
+  width: 100%;
+  height: 220px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  overflow: hidden;
+  padding: 16px;
+
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.45);
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  transition: 0.3s ease;
+  filter: drop-shadow(0px 10px 18px rgba(0, 0, 0, 0.65));
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.06);
+}
+
+.product-desc {
+  margin: 10px 0;
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+.product-quality,
+.product-use {
+  color: #cbd5e1;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.product-link {
+  display: block;
+  text-align: center;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 900;
+  background: #3b82f6;
+  color: white;
+  transition: 0.3s;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.product-link:hover {
+  background: #2563eb;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer {
+  padding: 35px 20px;
+  text-align: center;
+  background: #0f172a;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer p {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.footer-disclaimer {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.footer-links {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 850px) {
+  .nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .hero {
+    padding: 75px 20px;
+    background-position: center;
+  }
+
+  .hero h2 {
+    font-size: 34px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ==========================
+   BLOG CARDS (PREMIUM)
+========================== */
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.blog-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-card:hover {
+  transform: translateY(-7px);
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* IMAGEM DO CARD */
+.blog-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  padding: 14px;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.3s ease;
+  filter: drop-shadow(0px 10px 18px rgba(0, 0, 0, 0.65));
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.06);
+}
+
+/* TÍTULO */
+.blog-card h3 {
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+/* DESCRIÇÃO */
+.blog-card p {
+  color: #cbd5e1;
+  font-size: 15px;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+/* TAG DE NÍVEL (iniciante/intermediário/avançado) */
+.blog-tag {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+/* TAGS COLORIDAS */
+.blog-tag.green {
+  background: rgba(34, 197, 94, 0.16);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.35);
+}
+
+.blog-tag.yellow {
+  background: rgba(250, 204, 21, 0.16);
+  color: #facc15;
+  border: 1px solid rgba(250, 204, 21, 0.35);
+}
+
+.blog-tag.red {
+  background: rgba(239, 68, 68, 0.16);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+/* BOTÃO LER MAIS */
+.blog-btn {
+  margin-top: auto;
+  display: block;
+  text-align: center;
+  padding: 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 900;
+  background: #3b82f6;
+  color: white;
+  transition: 0.3s;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.blog-btn:hover {
+  background: #2563eb;
+}
+
+/* ==========================
+   BLOG CARD PREMIUM EFFECT
+========================== */
+
+.blog-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* glow suave ao passar o mouse */
+.blog-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left,
+    rgba(34, 197, 94, 0.20),
+    transparent 65%);
+  opacity: 0;
+  transition: 0.4s ease;
+  z-index: 0;
+}
+
+/* linha de luz diagonal */
+.blog-card::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -200px;
+  width: 200px;
+  height: 400px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: 0.6s ease;
+  z-index: 0;
+}
+
+/* ativação do efeito */
+.blog-card:hover::before {
+  opacity: 1;
+}
+
+.blog-card:hover::after {
+  opacity: 1;
+  left: 120%;
+}
+
+/* garantir que conteúdo fique por cima */
+.blog-card * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================
+   PRODUCT CARD PREMIUM EFFECT
+========================== */
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* glow suave */
+.product-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left,
+    rgba(59, 130, 246, 0.22),
+    transparent 65%);
+  opacity: 0;
+  transition: 0.4s ease;
+  z-index: 0;
+}
+
+/* linha de luz */
+.product-card::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -220px;
+  width: 220px;
+  height: 450px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.14),
+    transparent
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: 0.7s ease;
+  z-index: 0;
+}
+
+/* ativação do efeito */
+.product-card:hover::before {
+  opacity: 1;
+}
+
+.product-card:hover::after {
+  opacity: 1;
+  left: 130%;
+}
+
+/* garante que o conteúdo fique por cima */
+.product-card * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================
+   PREMIUM GLOW POR NÍVEL
+========================== */
+
+.card,
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* glow base (desligado até hover) */
+.card::before,
+.product-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 0.4s ease;
+  z-index: 0;
+}
+
+/* linha de luz */
+.card::after,
+.product-card::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -220px;
+  width: 220px;
+  height: 450px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.14),
+    transparent
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: 0.7s ease;
+  z-index: 0;
+}
+
+/* hover ativa efeitos */
+.card:hover::before,
+.product-card:hover::before {
+  opacity: 1;
+}
+
+.card:hover::after,
+.product-card:hover::after {
+  opacity: 1;
+  left: 130%;
+}
+
+/* garante conteúdo acima */
+.card *,
+.product-card * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================
+   CORES DOS GLOWS
+========================== */
+
+/* 🟢 VERDE */
+.card-green::before {
+  background: radial-gradient(circle at top left,
+    rgba(34, 197, 94, 0.28),
+    transparent 65%);
+}
+
+/* 🟡 AMARELO */
+.card-yellow::before {
+  background: radial-gradient(circle at top left,
+    rgba(250, 204, 21, 0.26),
+    transparent 65%);
+}
+
+/* 🔴 VERMELHO */
+.card-red::before {
+  background: radial-gradient(circle at top left,
+    rgba(239, 68, 68, 0.28),
+    transparent 65%);
+}
+
+/* 🔵 AZUL (produtos padrão) */
+.card-blue::before {
+  background: radial-gradient(circle at top left,
+    rgba(59, 130, 246, 0.25),
+    transparent 65%);
+}

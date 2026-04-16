@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8E11G64VC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R8E11G64VC');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Let’s Gym Talk | Guia de Academia, Musculação e Nutrição</title>
+
+  <meta name="description" content="Let’s Gym Talk é um site completo de academia e nutrição baseado em ciência. Treinos para iniciantes, dieta, suplementação e melhores produtos fitness da Amazon.">
+  <meta name="keywords" content="academia, musculação, hipertrofia, treino, dieta, emagrecimento, creatina, whey, superávit calórico, déficit calórico, suplementos">
+  <meta name="author" content="Let’s Gym Talk">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Let’s Gym Talk - Guia completo de Academia">
+  <meta property="og:description" content="Conteúdo baseado em ciência para você evoluir na academia do nível iniciante ao avançado.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:type" content="website">
+
+  <link rel="canonical" href="https://lets-gym-talk.netlify.app/">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonte moderna (deixa o site MUITO mais profissional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo-area">
+    <img src="assets/name.png" alt="Logo Let’s Gym Talk" class="logo">
+    <div>
+      <h1>Let’s Gym Talk</h1>
+      <p class="subtitle">Academia, ciência e motivação</p>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Início</a>
+    <a href="blog.html">Blog</a>
+    <a href="top-produtos.html" class="nav-highlight">Top Produtos</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<!-- MENU MOBILE -->
+<div class="side-menu" id="sideMenu">
+  <button class="close-btn" onclick="toggleMenu()">✖</button>
+
+  <a href="index.html">🏠 Início</a>
+  <a href="blog.html">📚 Blog</a>
+  <a href="top-produtos.html">🛒 Top Produtos</a>
+  <a href="sobre.html">👤 Sobre</a>
+
+  <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.15); margin: 12px 0;">
+
+  <a href="#comecar" onclick="toggleMenu()">🚀 Comece por aqui</a>
+  <a href="#beneficios" onclick="toggleMenu()">💪 Benefícios</a>
+  <a href="#duvidas" onclick="toggleMenu()">❓ Dúvidas</a>
+  <a href="#nutricao" onclick="toggleMenu()">🍽️ Nutrição</a>
+  <a href="#artigos" onclick="toggleMenu()">📚 Artigos</a>
+  <a href="#produtos" onclick="toggleMenu()">⭐ Produtos</a>
+</div>
+
+<!-- BOTÃO FLUTUANTE -->
+<a href="#produtos" class="floating-btn">🛒 Ver Produtos</a>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h2>Treino e Nutrição com base em ciência</h2>
+
+    <p>
+      Bem-vindo ao <strong>Let’s Gym Talk</strong>. Aqui você encontra conteúdos completos sobre academia,
+      musculação, dieta e suplementação — com linguagem simples e respaldo científico.
+    </p>
+
+    <div class="hero-highlight">
+      <p><strong>🎯 Objetivo do site:</strong> te ajudar a treinar melhor, evoluir mais rápido e evitar erros comuns.</p>
+    </div>
+
+    <p class="disclaimer">
+      ⚠️ Conteúdo educativo. Não substitui acompanhamento médico, nutricional ou de profissional de educação física.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#comecar" class="cta-btn primary">Começar agora</a>
+      <a href="blog.html" class="cta-btn secondary">Ver artigos</a>
+      <a href="top-produtos.html" class="cta-btn secondary">Top Produtos</a>
+    </div>
+
+    <div class="level-buttons">
+      <button class="level-btn green" onclick="scrollToSection('iniciante')">Iniciante</button>
+      <button class="level-btn yellow" onclick="scrollToSection('intermediario')">Intermediário</button>
+      <button class="level-btn red" onclick="scrollToSection('avancado')">Avançado</button>
+    </div>
+  </div>
+</section>
+
+<!-- COMEÇAR POR AQUI -->
+<section class="section" id="comecar">
+  <h2 class="section-title">🚀 Comece por aqui (Guia rápido)</h2>
+
+  <p class="products-intro">
+    Se você caiu aqui agora, siga esse caminho. Ele é o mais eficiente para iniciantes e também para quem quer resultados rápidos.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🟢 Treino Iniciante (3x por semana)</h3>
+      <p>
+        O melhor ponto de partida para quem está começando. Aprenda a treinar sem exagerar e sem se machucar.
+      </p>
+      <a class="product-link" href="treino-iniciante-3x.html">Ler guia</a>
+    </div>
+
+    <div class="card">
+      <h3>🍽️ Déficit Calórico (emagrecer)</h3>
+      <p>
+        Quer perder gordura? Entenda como funciona o déficit calórico e como emagrecer sem perder massa muscular.
+      </p>
+      <a class="product-link" href="deficit-calorico.html">Ler guia</a>
+    </div>
+
+    <div class="card">
+      <h3>💪 Superávit Calórico (hipertrofia)</h3>
+      <p>
+        Quer crescer? Veja como aumentar calorias corretamente e evitar ganho excessivo de gordura.
+      </p>
+      <a class="product-link" href="superavit-calorico.html">Ler guia</a>
+    </div>
+
+    <div class="card">
+      <h3>⚡ Creatina (guia científico)</h3>
+      <p>
+        O suplemento mais estudado do mundo fitness. Saiba como usar corretamente e quais marcas valem mais a pena.
+      </p>
+      <a class="product-link" href="top-creatinas.html">Ver Top Creatinas</a>
+    </div>
+  </div>
+</section>
+
+<!-- INICIANTE -->
+<section class="section" id="iniciante">
+  <h2 class="section-title green-title">🟢 Nível Iniciante: Como começar na academia</h2>
+
+  <div class="content-box">
+    <h3>1. Avaliação inicial e segurança</h3>
+    <p>
+      Antes de iniciar um treino estruturado, é recomendado avaliar seu estado de saúde geral,
+      especialmente se houver histórico de hipertensão, diabetes, obesidade, sedentarismo prolongado,
+      dor articular frequente ou problemas cardiovasculares.
+    </p>
+
+    <p>
+      A musculação é extremamente benéfica, mas o melhor caminho é começar com progressão gradual e técnica correta.
+    </p>
+
+    <h3>2. O que fazer nas primeiras semanas?</h3>
+    <p>
+      Nas primeiras semanas, o foco não é levantar o máximo de peso. O objetivo é aprender a execução,
+      ganhar consciência corporal e criar consistência.
+    </p>
+
+    <ul>
+      <li>Treinar 3 a 4 vezes por semana</li>
+      <li>Priorizar exercícios básicos (agachamento, supino, remada, puxada)</li>
+      <li>Fazer progressão gradual de carga</li>
+      <li>Não copiar treino avançado do TikTok</li>
+    </ul>
+
+    <h3>3. Dor muscular x dor articular</h3>
+    <p>
+      Dor muscular tardia (aquela dor 24-48h após o treino) é normal no início.
+      Já dor articular forte, pontada ou dor que piora durante o exercício deve ser investigada.
+    </p>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="section" id="beneficios">
+  <h2 class="section-title">💪 Benefícios da musculação em todas as idades</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Adolescentes</h3>
+      <p>
+        Melhora coordenação, postura, força e reduz risco de lesões quando feita com supervisão e técnica correta.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Adultos</h3>
+      <p>
+        Ajuda no emagrecimento, aumenta massa magra, melhora saúde mental e reduz risco de doenças metabólicas.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Idosos</h3>
+      <p>
+        Ajuda na prevenção da sarcopenia, aumenta autonomia, reduz risco de quedas e melhora qualidade de vida.
+      </p>
+    </div>
+  </div>
+
+  <div class="content-box">
+    <h3>Benefícios comprovados pela ciência</h3>
+    <ul>
+      <li>Melhora da densidade óssea</li>
+      <li>Redução de risco cardiovascular</li>
+      <li>Melhora da sensibilidade à insulina</li>
+      <li>Redução de sintomas depressivos e ansiedade</li>
+      <li>Melhora da qualidade do sono</li>
+      <li>Melhora do metabolismo e composição corporal</li>
+    </ul>
+  </div>
+</section>
+
+<!-- INTERMEDIÁRIO -->
+<section class="section" id="intermediario">
+  <h2 class="section-title yellow-title">🟡 Nível Intermediário: Evolução e consistência</h2>
+
+  <div class="content-box">
+    <h3>Progressão de carga (o segredo do crescimento)</h3>
+    <p>
+      Seu corpo se adapta. Para continuar evoluindo, você precisa aumentar gradualmente estímulos.
+      Isso pode acontecer aumentando carga, repetições, séries ou melhorando execução.
+    </p>
+
+    <h3>Frequência de treino por músculo</h3>
+    <p>
+      Em geral, treinar cada grupo muscular cerca de 2 vezes por semana tende a ser eficiente para hipertrofia,
+      desde que o volume total e recuperação estejam equilibrados.
+    </p>
+
+    <h3>Descanso entre séries</h3>
+    <p>
+      Exercícios compostos e pesados geralmente exigem 2-3 minutos de descanso. Exercícios isolados podem ser feitos com 1 minuto.
+    </p>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section class="section" id="duvidas">
+  <h2 class="section-title">📌 Principais dúvidas da comunidade</h2>
+
+  <div class="faq">
+
+    <div class="faq-item">
+      <button class="faq-question">Musculação emagrece mesmo?</button>
+      <div class="faq-answer">
+        <p>
+          Sim. A musculação aumenta massa magra e melhora o metabolismo. Porém o emagrecimento acontece com déficit calórico.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Cardio atrapalha ganhar massa?</button>
+      <div class="faq-answer">
+        <p>
+          Não necessariamente. Cardio moderado pode ajudar na saúde e resistência. O excesso pode prejudicar recuperação.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Whey e creatina são obrigatórios?</button>
+      <div class="faq-answer">
+        <p>
+          Não. Eles são suplementos, não substitutos. Podem facilitar resultados, mas dieta e treino são a base.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Quanto tempo demora para ver resultado?</button>
+      <div class="faq-answer">
+        <p>
+          Mudanças podem aparecer entre 4 e 12 semanas. Resultados reais vêm com meses de consistência e progressão.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NUTRIÇÃO -->
+<section class="section" id="nutricao">
+  <h2 class="section-title">🍽️ Nutrição: Superávit e Déficit Calórico</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Déficit Calórico</h3>
+      <p>
+        Consumir menos calorias do que gasta. Estratégia principal para emagrecimento.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Superávit Calórico</h3>
+      <p>
+        Consumir mais calorias do que gasta. Estratégia principal para hipertrofia e ganho de massa muscular.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Recomposição Corporal</h3>
+      <p>
+        Ganhar músculo e perder gordura ao mesmo tempo. Mais comum em iniciantes e pessoas retornando ao treino.
+      </p>
+    </div>
+  </div>
+
+  <div class="content-box">
+    <h3>Proteína recomendada para hipertrofia</h3>
+    <p>
+      A literatura científica aponta que a hipertrofia costuma ser otimizada em torno de
+      <strong>1,6g a 2,2g de proteína por kg</strong> de peso corporal.
+    </p>
+
+    <h3>Carboidratos e energia</h3>
+    <p>
+      Carboidratos são o combustível do treino pesado. Cortar demais pode reduzir força, volume e recuperação.
+    </p>
+
+    <h3>Gorduras saudáveis</h3>
+    <p>
+      Gorduras são essenciais para saúde hormonal e absorção de vitaminas. Priorize azeite, ovos, castanhas e peixes.
+    </p>
+  </div>
+</section>
+
+<!-- AVANÇADO -->
+<section class="section" id="avancado">
+  <h2 class="section-title red-title">🔴 Nível Avançado: Estratégias para avançar</h2>
+
+  <div class="content-box">
+    <h3>Periodização</h3>
+    <p>
+      Para avançados, alternar volume, intensidade e fases de treino ajuda a quebrar platôs e evitar overtraining.
+    </p>
+
+    <h3>Falha muscular</h3>
+    <p>
+      A falha pode ser útil, mas não deve ser usada em todo treino. Em excesso, prejudica recuperação e aumenta risco de lesão.
+    </p>
+
+    <h3>Recuperação e sono</h3>
+    <p>
+      Sono ruim e estresse alto diminuem performance e dificultam hipertrofia.
+      Em nível avançado, recuperação é tão importante quanto treino.
+    </p>
+  </div>
+</section>
+
+<!-- ARTIGOS -->
+<section class="section" id="artigos">
+  <h2 class="section-title">📚 Artigos em destaque</h2>
+
+  <p class="products-intro">
+    Conteúdos completos com embasamento científico para você evoluir mais rápido e com segurança.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Creatina: guia completo e top 5 de 2026</h3>
+      <p>
+        Descubra como tomar creatina, se faz mal e quais são as melhores opções para comprar.
+      </p>
+      <a class="product-link" href="top-creatinas.html">Ver Top Creatinas</a>
+    </div>
+
+    <div class="card">
+      <h3>Treino iniciante 3x por semana</h3>
+      <p>
+        Treino completo para iniciantes com evolução segura e ótima base para hipertrofia.
+      </p>
+      <a class="product-link" href="treino-iniciante-3x.html">Ler artigo</a>
+    </div>
+
+    <div class="card">
+      <h3>Déficit calórico: como emagrecer certo</h3>
+      <p>
+        Entenda como perder gordura com saúde e sem perder massa muscular.
+      </p>
+      <a class="product-link" href="deficit-calorico.html">Ler artigo</a>
+    </div>
+
+    <div class="card">
+      <h3>Whey protein: vale a pena?</h3>
+      <p>
+        Saiba quando whey realmente ajuda e quando é só gasto desnecessário.
+      </p>
+      <a class="product-link" href="whey-protein.html">Ler artigo</a>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE CONFIAR -->
+<section class="section" id="confiar">
+  <h2 class="section-title">🔬 Por que confiar no Let’s Gym Talk?</h2>
+
+  <div class="content-box">
+    <ul>
+      <li><strong>Conteúdo baseado em estudos científicos</strong> e literatura de nutrição esportiva.</li>
+      <li><strong>Explicações simples</strong>, sem linguagem médica complicada.</li>
+      <li><strong>Sem promessas falsas</strong> (nem dieta milagrosa).</li>
+      <li><strong>Foco em resultados reais</strong>: treino + nutrição + consistência.</li>
+      <li><strong>Recomendações de produtos opcionais</strong>, apenas para facilitar a rotina.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="section" id="produtos">
+  <h2 class="section-title">🛒 Produtos recomendados (Afiliados Amazon)</h2>
+
+  <p class="products-intro">
+    Suplementos e acessórios não são obrigatórios, mas podem facilitar sua rotina.
+    Se você quiser investir em algo, aqui estão opções úteis e populares.
+  </p>
+
+  <div class="products-grid">
+
+    <div class="product-card card-blue">
+      <div class="product-image">
+        <img src="assets/strap.png" alt="Strap musculação" class="product-img">
+      </div>
+      <h3>Punch Strap</h3>
+      <p class="product-desc">
+        Ajuda na pegada em puxadas e remadas, reduz fadiga do antebraço.
+      </p>
+      <p class="product-quality"><strong>Qualidade:</strong> ⭐⭐⭐⭐⭐</p>
+      <p class="product-use"><strong>Uso:</strong> Use em treinos de costas e terra quando necessário.</p>
+      <a class="product-link" href="https://amzn.to/4v3xArA" target="_blank">Ver na Amazon</a>
+    </div>
+
+    <div class="product-card card-blue">
+      <div class="product-image">
+        <img src="assets/whey.png" alt="Whey protein integralmedica" class="product-img">
+      </div>
+      <h3>Whey Protein</h3>
+      <p class="product-desc">
+        Ajuda a bater a meta de proteína com praticidade no dia a dia.
+      </p>
+      <p class="product-quality"><strong>Qualidade:</strong> ⭐⭐⭐⭐⭐</p>
+      <p class="product-use"><strong>Uso:</strong> Misture com água ou leite conforme rótulo.</p>
+      <a class="product-link" href="https://amzn.to/47IiNZq" target="_blank">Ver na Amazon</a>
+    </div>
+
+    <div class="product-card card-blue">
+      <div class="product-image">
+        <img src="assets/crea.png" alt="Creatina monohidratada" class="product-img">
+      </div>
+      <h3>Creatina Monohidratada</h3>
+      <p class="product-desc">
+        Suplemento mais estudado para força, desempenho e hipertrofia.
+      </p>
+      <p class="product-quality"><strong>Qualidade:</strong> ⭐⭐⭐⭐⭐</p>
+      <p class="product-use"><strong>Uso:</strong> 3g a 5g por dia, todos os dias.</p>
+      <a class="product-link" href="https://amzn.to/4e4Ti8y" target="_blank">Ver na Amazon</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-card card-blue">
+        <img src="assets/prétreino.png" alt="Pré treino Horus Max Titanium" class="product-img">
+      </div>
+      <h3>Pré-treino</h3>
+      <p class="product-desc">
+        Ajuda energia e foco, especialmente em dias cansativos (use com responsabilidade).
+      </p>
+      <p class="product-quality"><strong>Qualidade:</strong> ⭐⭐⭐⭐⭐</p>
+      <p class="product-use"><strong>Uso:</strong> Tome antes do treino conforme orientação do rótulo.</p>
+      <a class="product-link" href="https://amzn.to/4crROE3" target="_blank">Ver na Amazon</a>
+    </div>
+
+  </div>
+
+  <p class="disclaimer" style="margin-top: 20px;">
+    ⚠️ Links de afiliado: se você comprar por eles, o site pode receber comissão sem custo extra para você.
+  </p>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Let’s Gym Talk — Conteúdo educativo baseado em ciência.</p>
+
+  <p class="footer-disclaimer">
+    Este site pode conter links de afiliado. Compras feitas através deles podem gerar comissão sem custo extra para você.
+  </p>
+
+  <div class="footer-links">
+    <a href="privacidade.html">Privacidade</a>
+    <a href="termos.html">Termos</a>
+    <a href="cookies.html">Cookies</a>
+    <a href="afiliados.html">Afiliados</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("sideMenu").classList.toggle("active");
+  }
+
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+</body>
+</html>
