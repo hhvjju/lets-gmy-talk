@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lets-gmy-talk.netlify.app/sitemap.xml
+Sitemap: https://hhvjju.github.io/lets-gmy-talk/sitemap.xml
