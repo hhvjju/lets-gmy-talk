@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://hhvjju.github.io/lets-gmy-talk/sitemap.xml
+
+git add robots.txt
+git commit -m "Fix robots sitemap"
+git push
